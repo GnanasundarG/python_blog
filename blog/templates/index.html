@@ -2,7 +2,12 @@
     Blogs for EC2/S3/SNS connections
 </h1>
 <ul>
-    <li>Blog 1</li>
-    <li>Blog 1</li>
-    <li>Blog 1</li>
+    {% for blog in blogs %}
+    <li>{{ blog.title }}</li>
+    {% endfor %}
+
+    <h3>Object data from s3 bucket</h3>
+    {% for name in bucket %}
+    <li>{{ name }}</li>
+    {% endfor %}
 </ul>
